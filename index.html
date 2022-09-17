@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/64829413?s=280&v=4"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Codest - Recruitment Task</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Helvetica, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 50px;
+      row-gap: 30px;
+    }
+
+    .wrapper {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      width: 800px;
+    }
+
+    p {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 10px 20px;
+      background-color: rgba(104, 155, 222, 0.127);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    }
+    textarea {
+      padding: 20px;
+      font-size: 20px;
+      resize: none;
+      width: 100%;
+      min-height: 500px;
+      border: none;
+    }
+    textarea:focus-visible {
+      outline: none;
+    }
+
+    .tooltip {
+      position: relative;
+      width: 100%;
+      color: rgba(104, 155, 222, 0.8);
+      display: inline-block;
+      text-decoration: underline;
+      padding: 10px 0;
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: auto;
+      background-color: rgba(250, 235, 18, 0.5);
+      color: #000;
+      text-align: left;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      left: 50px;
+      top: 0;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>
+        <h2>
+          Task : Editor’s prototype for a redactor of a cryptocurrencie’s blog.
+        </h2>
+        <div class="tooltip">
+          Help !
+          <span class="tooltiptext"
+            >Each argument should be formatted in a followed way: {{
+            MethodName/argument }}</span
+          >
+        </div>
+      </header>
+      <div class="wrapper">
+        <h3>Input</h3>
+        <textarea name="rawText" id="rawText" cols="" rows=""></textarea>
+      </div>
+      <button>Transform</button>
+      <div class="wrapper">
+        <h3>Output</h3>
+
+        <p id="preview"></p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
